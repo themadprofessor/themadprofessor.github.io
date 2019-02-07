@@ -1,99 +1,110 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Awesome Resume/CV
-% XeLaTeX Template
-% Version 1.2 (27/3/2017)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Claud D. Park (posquit0.bj@gmail.com) with modifications by 
-% Vel (vel@latextemplates.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-% Important note:
-% This template must be compiled with XeLaTeX, the below lines will ensure this
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
 
-\documentclass[11pt, a4paper]{awesome-cv} % A4 paper size by default, use 'letterpaper' for US letter
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
 
-\geometry{left=2cm, top=1.5cm, right=2cm, bottom=2cm, footskip=.5cm} % Configure page margins with geometry
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
-\fontdir[fonts/] % Specify the location of the included fonts
+% Specify the location of the included fonts
+\fontdir[fonts/]
 
 % Color for highlights
-\colorlet{awesome}{awesome-skyblue} % Default colors include: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange, awesome-nephritis, awesome-concrete, awesome-darknight
-%\definecolor{awesome}{HTML}{CA63A8} % Uncomment if you would like to specify your own color
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-skyblue}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
 
-% Colors for text - uncomment and modify
-%\definecolor{darktext}{HTML}{414141}
-%\definecolor{text}{HTML}{414141}
-%\definecolor{graytext}{HTML}{414141}
-%\definecolor{lighttext}{HTML}{414141}
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
 
-\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad} % If you would like to change the social information separator from a pipe (|) to something else
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
 
-%----------------------------------------------------------------------------------------
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
 %	Comment any of the lines below if they are not required
-%----------------------------------------------------------------------------------------
-
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[rectangle,edge,right]{./examples/profile}
 \name{Stuart}{Reilly}
-\address{Flat 2/3, 6 Regent Moray Street, Glasgow, G3 8AQ}
-\mobile{07792 348919}
+\position{Computer Science Student}
+%\address{2/3, 6 Regent Moray Street, Glasgow, G3 8AQ}
 
+\mobile{07792 348919}
 \email{stu@reilly-family.co.uk}
 %\homepage{www.posquit0.com}
 \github{themadprofessor}
-\linkedin{stuart-r-364a1198}
-%\skype{skypeid}
-%\stackoverflow{SOid}{SOname}
-%\twitter{@twit}
-%\linkedin{linkedin name}
-%\reddit{reddit account}
-%\xing{xing name}
-%\extrainfo{test} % Other text you want to include on this line
+\linkedin{stuart-r-354a1198}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra informations}
 
-\position{Software Engineer} %{\enskip\cdotp\enskip}Security Expert} % Your expertise/fields
-%\quote{``Make the change that you want to see in the world."} % A quote or statement
+%\quote{``Be the change that you want to see in the world."}
 
-\makecvfooter{\today}{Stuart Reilly~~~·~~~Curriculum Vitea}{\thepage} % Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave any of these blank if they are not needed
 
-%----------------------------------------------------------------------------------------
-
+%-------------------------------------------------------------------------------
 \begin{document}
 
-\makecvheader % Print the header
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[C]
 
-A self-motivated, caring indvidual who applies himself in a professional, efficent manner to all tasks.
-During my time at COR Solutions, my communication and organisational skills developed in order to provide a professional service to the customers.
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Stuart Reilly~~~·~~~CV}
+  {\thepage}
 
-%----------------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\input{resume/summary.tex}
+\input{resume/experience.tex}
+%\input{resume/honors.tex}
+%\input{resume/presentation.tex}
+%\input{resume/writing.tex}
+%\input{resume/committees.tex}
+\input{resume/education.tex}
+\input{resume/skills.tex}
+\input{resume/extracurricular.tex}
 
-\input{cv-sections/education.tex}
-\input{cv-sections/skills.tex}
-\input{cv-sections/experience.tex}
 
-%\newpage % Force a new page for looks
-
-%\input{cv-sections/extracurricular.tex}
-%\input{cv-sections/honors.tex}
-%\input{cv-sections/presentation.tex}
-%\input{cv-sections/writing.tex}
-%\input{cv-sections/committees.tex}
-
-%----------------------------------------------------------------------------------------
-
+%-------------------------------------------------------------------------------
 \end{document}
