@@ -21,11 +21,7 @@
 \documentclass[11pt, a4paper]{awesome-cv}
 
 % Configure page margins with geometry
-%\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.5cm, footskip=.5cm}
-\geometry{left=2.0cm, top=1.5cm, right=2.0cm, bottom=2.0cm, footskip=.5cm}
-
-% Specify the location of the included fonts
-\fontdir[fonts/]
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
 % Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
@@ -55,8 +51,7 @@
 % Available options: circle|rectangle,edge/noedge,left/right
 % \photo[rectangle,edge,right]{./examples/profile}
 \name{Stuart}{Reilly}
-\position{Computer Science Student}
-%\address{2/3, 6 Regent Moray Street, Glasgow, G3 8AQ}
+\position{Software Developer}
 
 \mobile{07792 348919}
 \email{stu@reilly-family.co.uk}
@@ -69,10 +64,12 @@
 % \skype{skype-id}
 % \reddit{reddit-id}
 % \medium{madium-id}
+% \kaggle{kaggle-id}
+% \hackerrank{hackerrank-id}
 % \googlescholar{googlescholar-id}{name-to-display}
 %% \firstname and \lastname will be used
 % \googlescholar{googlescholar-id}{}
-% \extrainfo{extra informations}
+% \extrainfo{extra information}
 
 %\quote{``Be the change that you want to see in the world."}
 
@@ -82,30 +79,29 @@
 
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader[C]
+    \makecvheader[C]
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
-\makecvfooter
-  {\today}
-  {Stuart Reilly~~~·~~~CV}
-  {\thepage}
+    \makecvfooter
+    {\today}
+    {Stuart Reilly~~~·~~~CV}
+    {\thepage}
 
 
 %-------------------------------------------------------------------------------
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{resume/summary.tex}
-\input{resume/experience.tex}
+    \input{resume/summary}
+    \input{resume/experience}
 %\input{resume/honors.tex}
 %\input{resume/presentation.tex}
 %\input{resume/writing.tex}
 %\input{resume/committees.tex}
-\input{resume/education.tex}
-\input{resume/skills.tex}
-\pagebreak
-\input{resume/extracurricular.tex}
+    \input{resume/education}
+    \input{resume/skills}
+    \input{resume/extracurricular}
 
 
 %-------------------------------------------------------------------------------
